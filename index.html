@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/seal.png" />
+    <link rel="apple-touch-icon" href="/seal.png" />
+    <title>AAPHREML-IRERC Institutional Research Ethics Review Portal</title>
+    <meta
+      name="description"
+      content="AAPHREML-IRERC Institutional Research Ethics Review Portal — Addis Ababa City Administration Health Bureau Public Health Emergency Management Laboratory & Research Directorate"
+    />
+    <meta name="theme-color" content="#eef5ff" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("irerc-theme");
+          var ok = ["daylight", "ocean", "sand", "midnight", "graphite", "forest", "plum", "rosewood"];
+          if (t && ok.indexOf(t) > -1) {
+            document.documentElement.dataset.theme = t;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>

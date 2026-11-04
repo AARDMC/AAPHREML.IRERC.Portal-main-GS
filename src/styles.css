@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+.doc-preview {
+  color: var(--color-fg);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.doc-preview h1,
+.doc-preview h2,
+.doc-preview h3 {
+  margin: 1.1em 0 0.45em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.doc-preview h1 { font-size: 1.35rem; }
+.doc-preview h2 { font-size: 1.15rem; }
+.doc-preview h3 { font-size: 1rem; }
+.doc-preview p { margin: 0.55em 0; }
+.doc-preview ul,
+.doc-preview ol { margin: 0.6em 0; padding-left: 1.4rem; }
+.doc-preview ul { list-style: disc; }
+.doc-preview ol { list-style: decimal; }
+.doc-preview table {
+  width: 100%;
+  margin: 0.8em 0;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.doc-preview th,
+.doc-preview td {
+  border: 1px solid var(--color-line);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.doc-preview th { background: var(--color-panel-2); }
+.doc-preview img { max-width: 100%; height: auto; }
+.doc-preview a { color: var(--color-sky); text-decoration: underline; }
+
+@theme {
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --color-ink: #07131c;
+  --color-ink-2: #0c1c2a;
+  --color-panel: #102433;
+  --color-panel-2: #163044;
+  --color-line: #2a4256;
+  --color-line-2: #3b5870;
+  --color-fg: #e7eef6;
+  --color-muted: #8ea6bd;
+  --color-sky: #3cb4e8;
+  --color-em: #2fbf8f;
+  --color-amber: #e6b34d;
+  --color-rose: #f07184;
+  --color-on-accent: #07131c;
+  --color-scrim: #000000;
+  --radius-card: 1.125rem;
+}
+
+/* Runtime themes. Every utility resolves through these variables, so switching
+   the data-theme attribute restyles the whole portal without a reload. */
+:root,
+[data-theme="midnight"] {
+  --color-ink: #07131c;
+  --color-ink-2: #0c1c2a;
+  --color-panel: #102433;
+  --color-panel-2: #163044;
+  --color-line: #2a4256;
+  --color-line-2: #3b5870;
+  --color-fg: #e7eef6;
+  --color-muted: #8ea6bd;
+  --color-sky: #3cb4e8;
+  --color-em: #2fbf8f;
+  --color-amber: #e6b34d;
+  --color-rose: #f07184;
+  --color-on-accent: #07131c;
+}
+
+[data-theme="graphite"] {
+  --color-ink: #08090b;
+  --color-ink-2: #101215;
+  --color-panel: #15181c;
+  --color-panel-2: #1b1f24;
+  --color-line: #292e35;
+  --color-line-2: #3a414a;
+  --color-fg: #eceff3;
+  --color-muted: #a0a8b3;
+  --color-sky: #a3e635;
+  --color-em: #34d399;
+  --color-amber: #fbbf24;
+  --color-rose: #fb7185;
+  --color-on-accent: #0a0b0d;
+}
+
+[data-theme="forest"] {
+  --color-ink: #06120f;
+  --color-ink-2: #0a1b16;
+  --color-panel: #0f241e;
+  --color-panel-2: #143029;
+  --color-line: #21453b;
+  --color-line-2: #2f5b4e;
+  --color-fg: #e6f4ee;
+  --color-muted: #9ab8ac;
+  --color-sky: #5eead4;
+  --color-em: #4ade80;
+  --color-amber: #fde047;
+  --color-rose: #fb7185;
+  --color-on-accent: #04120c;
+}
+
+[data-theme="plum"] {
+  --color-ink: #120a17;
+  --color-ink-2: #1a0f21;
+  --color-panel: #24162c;
+  --color-panel-2: #2e1c37;
+  --color-line: #452b50;
+  --color-line-2: #5a3866;
+  --color-fg: #f3eaf7;
+  --color-muted: #bda6c9;
+  --color-sky: #e9d5ff;
+  --color-em: #86efac;
+  --color-amber: #fde68a;
+  --color-rose: #fda4af;
+  --color-on-accent: #150a1a;
+}
+
+[data-theme="daylight"] {
+  --color-ink: #eef5ff;
+  --color-ink-2: #e2edfb;
+  --color-panel: #ffffff;
+  --color-panel-2: #f2f7fe;
+  --color-line: #cfe0f3;
+  --color-line-2: #a9c4e2;
+  --color-fg: #0b2545;
+  --color-muted: #4c6784;
+  --color-sky: #0b63ce;
+  --color-em: #0b9b6d;
+  --color-amber: #d97706;
+  --color-rose: #dc2626;
+  --color-on-accent: #ffffff;
+}
+
+[data-theme="sand"] {
+  --color-ink: #f6f1e9;
+  --color-ink-2: #eee6d9;
+  --color-panel: #fffdf8;
+  --color-panel-2: #f4ede2;
+  --color-line: #e3d7c6;
+  --color-line-2: #cdbca6;
+  --color-fg: #2b2218;
+  --color-muted: #6f6152;
+  --color-sky: #0f766e;
+  --color-em: #15803d;
+  --color-amber: #b45309;
+  --color-rose: #b91c1c;
+  --color-on-accent: #ffffff;
+}
+
+[data-theme="ocean"] {
+  --color-ink: #eef7fb;
+  --color-ink-2: #e1eff7;
+  --color-panel: #ffffff;
+  --color-panel-2: #edf6fa;
+  --color-line: #d6e6ef;
+  --color-line-2: #b9d2df;
+  --color-fg: #0b2534;
+  --color-muted: #4f6b7a;
+  --color-sky: #0369a1;
+  --color-em: #0d9488;
+  --color-amber: #b45309;
+  --color-rose: #be123c;
+  --color-on-accent: #ffffff;
+}
+
+[data-theme="rosewood"] {
+  --color-ink: #170c10;
+  --color-ink-2: #211016;
+  --color-panel: #2a171e;
+  --color-panel-2: #341d26;
+  --color-line: #4a2a35;
+  --color-line-2: #613a48;
+  --color-fg: #f8e9ec;
+  --color-muted: #c4a3ab;
+  --color-sky: #fda4af;
+  --color-em: #86efac;
+  --color-amber: #fcd34d;
+  --color-rose: #fb7185;
+  --color-on-accent: #1a0a0e;
+}
+
+[data-theme="daylight"],
+[data-theme="sand"],
+[data-theme="ocean"] {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  input, select, textarea {
+    font: inherit;
+    color: inherit;
+  }
+  select option { background: var(--color-ink-2); color: var(--color-fg); }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility shadow-card {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(540deg); opacity: 0; }
+}
+@keyframes pulse-ring {
+  50% { box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-sky) 25%, transparent); }
+}
+
+.rise { animation: rise 0.35s ease both; }
+.pulse-ring { animation: pulse-ring 2.4s ease-in-out infinite; }
+.confetti-bit {
+  position: fixed;
+  top: -12px;
+  z-index: 80;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+/* The clearance certificate is always printed on white paper, independent of
+   the selected screen theme. */
+.certificate-surface {
+  background: #ffffff;
+  color: #111827;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  body * {
+    visibility: hidden !important;
+  }
+  .print-certificate,
+  .print-certificate * {
+    visibility: visible !important;
+  }
+  .print-certificate {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

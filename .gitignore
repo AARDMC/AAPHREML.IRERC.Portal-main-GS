@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.tanstack/
+.project_id
+.github_repo
+.env
+.env.*
+
+env.txt
+env.private.txt
